@@ -2,7 +2,7 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "feature-jenkinsfile" ]
+    branches: [ "feature-dir-inicial" ]
   pull_request:
     branches: [ "main" ]
 
