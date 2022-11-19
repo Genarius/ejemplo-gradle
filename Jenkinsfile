@@ -20,12 +20,14 @@ pipeline {
         }
         stage('Run') { 
             steps {
-                sh 'gradle bootRun' 
+                // sh 'gradle bootRun' 
+                echo 'Stage RUN'
             }
         }
         stage('Test') {
             steps {
-                sh 'curl -X GET http://localhost:8081/rest/mscovid/test?msg=testing'
+                // sh 'curl -X GET http://localhost:8081/rest/mscovid/test?msg=testing'
+                echo 'stage TEST'
             }
         }
         stage ('Nexus') {
