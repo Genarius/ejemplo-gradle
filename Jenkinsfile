@@ -13,7 +13,7 @@ pipeline {
         stage('Sonar') { 
             steps {
                 withSonarQubeEnv('SonarQB')  {
-                    -Dsonar.projectKey=ejemplo-gradle -Dsonar.java.binaries=build
+                    sh '-Dsonar.projectKey=ejemplo-gradle -Dsonar.java.binaries=build'
                 }
             }
         }
