@@ -29,7 +29,7 @@ pipeline {
         }
         stage ('Nexus') {
             steps {
-                 nexusPublisher nexusInstanceId: 'nexus01', nexusRepositoryId: 'devops-usach-nexus', packages: []               
+                 nexusPublisher nexusInstanceId: 'nexus01', nexusRepositoryId: 'devops-usach-nexus', packages: [[$class: 'MavenPackage', mavenAssetList: [], mavenCoordinate: [artifactId: 'DevOpsUsach2020', groupId: 'om.devopsusach2020', packaging: 'jar', version: '0.0.2']]]
             }
         }
        }
